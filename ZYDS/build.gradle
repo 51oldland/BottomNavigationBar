@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "www.zyds.com"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion 26
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            // 设置支持的 SO 库构架，注意这里要根据你的实际情况来设置
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86'
+// 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+    testOptions {
+        dexOptions {
+            jumboMode = true
+//            incremental true//现在是默认打开的
+            javaMaxHeapSize "4g"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    //net
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide_compiler"]
+    implementation rootProject.ext.dependencies["logger"]
+    implementation files('libs/volley.jar')
+    compile 'com.jaeger.statusbarutil:library:1.5.1'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.1.0'
+}

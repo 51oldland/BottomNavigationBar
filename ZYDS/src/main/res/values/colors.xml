@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--二维码-->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#c0000000</color>
+    <color name="capture_text_cover_bg">#99535353</color>
+    <color name="seek_bar_text">#fff6f6f6</color>
+
+
+    <color name="color_00fff">#00ffffff</color>
+    <color name="all_title_textcolor">#ffffff</color>
+    <color name="all_title_bgcolor">#bf0711</color>
+    <color name="all_bg_color">#f1f1f1</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_888888">#888888</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_636363">#636363</color>
+    <color name="color_EDEDED">#EDEDED</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_778899">#778899</color>
+    <color name="color_A9A9A9">#A9A9A9</color>
+    <color name="color_c0c0c0">#c0c0c0</color>
+    <color name="color_d3d3d3">#d3d3d3</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_434343">#434343</color>
+    <color name="color_6b6b6b">#6b6b6b</color>
+    <color name="color_f4f4f4">#f4f4f4</color>
+    <color name="color_774A4A4A">#774A4A4A</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_d8d8d8">#d8d8d8</color>
+    <color name="color_9b9b9b">#9b9b9b</color>
+    <color name="color_595959">#595959</color>
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="color_e12419">#e12419</color>
+    <color name="color_878787">#878787</color>
+    <color name="color_bf0711">#bf0711</color>
+    <color name="color_ee453b">#ee453b</color>
+    <color name="color_323232">#323232</color>
+    <color name="color_ff0000">#ff0000</color>
+    <color name="color_979797">#979797</color>
+    <color name="color_5b5a5d">#5b5a5d</color>
+    <color name="color_ffeedd">#ffeedd</color>
+    <color name="color_507DAF">#507DAF</color>
+    <color name="color_F8F8F8">#F8F8F8</color>
+    <color name="colot_666666">#666666</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_fafafa">#f4f4f4</color>
+    <color name="color_E2231A">#E2231A</color>
+    <color name="color_3699ff">#3699ff</color>
+    <color name="color_1AAD19">#1AAD19</color>
+    <color name="color_dddddd">#dddddd</color>
+    <color name="color_e0e0e0">#e0e0e0</color>
+    <color name="color_2a2a2a">#2A2A2A</color>
+    <color name="color_0A7CD8">#0A7CD8</color>
+    <color name="color_f0f0f0">#f0f0f0</color>
+    <color name="color_f1f8ff">#f1f8ff</color>
+    <color name="color_ff8300">#ff8300</color>
+    <color name="color_84c1ff">#84c1ff</color>
+    <color name="color_8ecdff">#8ECDFF</color>
+    <color name="color_848994">#848994</color>
+    <color name="color_c0ccdd">#c0ccdd</color>
+    <color name="color_fdecba">#FDECBA</color>
+    <color name="color_c8efd0">#C8EFD0</color>
+    <color name="color_65b1ff">#65B1FF</color>
+    <color name="color_feaf5c">#FEAF5C</color>
+    <color name="color_777777">#777777</color>
+    <color name="color_F7D58B">#F7D58B</color>
+
+</resources>
