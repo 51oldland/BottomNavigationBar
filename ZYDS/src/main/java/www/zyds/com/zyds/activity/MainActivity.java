@@ -117,25 +117,12 @@ public class MainActivity extends BaseActivity {
                         .setInactiveIconResource(R.drawable.icon_home_tab_self_gray_green))
                 .setFirstSelectedPosition(0) //设置默认选中位置
                 .initialise();
-        setIconItemMargin(mBottomNavigationBar,10,25,14);
+        setIconItemMargin(mBottomNavigationBar, 10, 25, 14);
         mBottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
                 mVpHome.setCurrentItem(position);
-                switch (position){
-                    case 0:
-                        mTextBadgeItem.setText("6");
-                        break;
-                    case 1:
-
-                        break;
-                    case 2:
-
-                        break;
-                    case 3:
-
-                        break;
-                }
+                mTextBadgeItem.setText("6");
             }
 
             @Override
@@ -231,24 +218,26 @@ public class MainActivity extends BaseActivity {
     protected void setStatusBar() {
         StatusBarUtil.setTranslucentForImageViewInFragment(MainActivity.this, 0, null);
     }
+
     /**
      * 修改间距及图片文字大小
+     *
      * @param bottomNavigationBar
-     * @param space  文字与图片的间距
-     * @param imgLen  单位：dp，图片大小
-     * @param textSize 单位：dp，文字大小
+     * @param space               文字与图片的间距
+     * @param imgLen              单位：dp，图片大小
+     * @param textSize            单位：dp，文字大小
      */
-    private void setIconItemMargin(BottomNavigationBar bottomNavigationBar, int space, int imgLen, int textSize){
+    private void setIconItemMargin(BottomNavigationBar bottomNavigationBar, int space, int imgLen, int textSize) {
         Class barClass = bottomNavigationBar.getClass();
         Field[] fields = barClass.getDeclaredFields();
-        for(int i = 0; i < fields.length; i++){
+        for (int i = 0; i < fields.length; i++) {
             Field field = fields[i];
             field.setAccessible(true);
-            if(field.getName().equals("mTabContainer")){
-                try{
+            if (field.getName().equals("mTabContainer")) {
+                try {
                     //反射得到 mTabContainer
                     LinearLayout mTabContainer = (LinearLayout) field.get(bottomNavigationBar);
-                    for(int j = 0; j < mTabContainer.getChildCount(); j++){
+                    for (int j = 0; j < mTabContainer.getChildCount(); j++) {
                         //获取到容器内的各个Tab
                         View view = mTabContainer.getChildAt(j);
                         //获取到Tab内的各个显示控件
@@ -262,17 +251,17 @@ public class MainActivity extends BaseActivity {
                         //计算文字的高度DP值并设置，setTextSize为设置文字正方形的对角线长度，所以：文字高度（总内容高度减去间距和图片高度）*根号2即为对角线长度，此处用DP值，设置该值即可。
                         labelView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, textSize);
                         labelView.setIncludeFontPadding(false);
-                        labelView.setPadding(0,0,0,dip2px(20-textSize - space/2));
+                        labelView.setPadding(0, 0, 0, dip2px(20 - textSize - space / 2));
 
                         //获取到Tab内的图像控件
                         ImageView iconView = (ImageView) view.findViewById(com.ashokvarma.bottomnavigation.R.id.fixed_bottom_navigation_icon);
                         //设置图片参数，其中，MethodUtils.dip2px()：换算dp值
                         params = new FrameLayout.LayoutParams(dip2px(imgLen), dip2px(imgLen));
-                        params.setMargins(0,0,0,space/2);
+                        params.setMargins(0, 0, 0, space / 2);
                         params.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
                         iconView.setLayoutParams(params);
                     }
-                } catch (IllegalAccessException e){
+                } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
             }
