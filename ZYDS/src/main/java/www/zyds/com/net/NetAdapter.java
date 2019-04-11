@@ -18,8 +18,10 @@ import www.zyds.com.zyds.bean.LogEntity;
 public class NetAdapter extends NetBase {
 
     public static String getApiPath(Context context, String path) {
-        return "http://" + context.getString(R.string.domain) + path;
+        return "https://" + context.getString(R.string.domain) + path;
     }
+
+    private static String mBaseUrl = "https://www.wanandroid.com";
     /**
      * 登录
      */
@@ -28,16 +30,30 @@ public class NetAdapter extends NetBase {
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", phone);
         params.put("passwd", password);
-        get_req(context,getApiPath(context,UrlString.PATH_LOGIN),LogEntity.class,params,listener);
+        get_req(context, getApiPath(context, UrlString.PATH_LOGIN), LogEntity.class, params, listener);
     }
+
     /**
      * 登录
      */
     public static void login2(Context context, final String phone,
-                             final String password, OnDataRequestListener listener) {
+                              final String password, OnDataRequestListener listener) {
         Map<String, String> params = new HashMap<String, String>();
         params.put("name", phone);
         params.put("passwd", password);
-        getStringReq(context,getApiPath(context,UrlString.PATH_LOGIN),params,listener);
+        getStringReq(context, getApiPath(context, UrlString.PATH_LOGIN), params, listener);
+    }
+
+    /**
+     * wanAndroid api
+     */
+    public static void getData(Context context, int curNum, OnDataRequestListener listener) {
+        getStringReq(context, mBaseUrl+"/article/list/"+curNum+"/json",null, listener);
+    }
+    /**
+     * wanAndroid api
+     */
+    public static void getBanner(Context context,  OnDataRequestListener listener) {
+        getStringReq(context, mBaseUrl+"/banner/json",null, listener);
     }
 }

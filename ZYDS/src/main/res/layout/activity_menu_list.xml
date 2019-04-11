@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical"
+    tools:context=".zyds.view.activity.MenuListActivity">
+
+    <Button
+        android:id="@+id/toMain"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="--->Main" />
+
+    <Button
+        android:id="@+id/toSwipMeun"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="--->SwipMeun" />
+
+    <Button
+        android:id="@+id/showText"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="--->showText" />
+    <Button
+        android:id="@+id/toBanner"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="--->toBanner" />
+    <TextView
+        android:id="@+id/showValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp" />
+
+    <com.shamanland.fab.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        app:floatingActionButtonColor="@color/color_ffffff"
+        app:floatingActionButtonSize="mini" />
+
+</LinearLayout>

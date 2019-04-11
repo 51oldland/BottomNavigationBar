@@ -1,4 +1,4 @@
-package www.zyds.com.zyds.activity;
+package www.zyds.com.zyds.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //跳转至 MainActivity
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, MenuListActivity.class);
                 startActivity(intent);
                 //结束当前的 Activity
                 finish();

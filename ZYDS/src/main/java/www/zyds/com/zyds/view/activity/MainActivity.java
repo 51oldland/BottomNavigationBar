@@ -1,4 +1,4 @@
-package www.zyds.com.zyds.activity;
+package www.zyds.com.zyds.view.activity;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -33,8 +33,8 @@ import java.util.Random;
 
 import www.zyds.com.R;
 import www.zyds.com.zyds.base.BaseActivity;
-import www.zyds.com.zyds.fragment.ImageFragment;
-import www.zyds.com.zyds.fragment.SimpleFragment;
+import www.zyds.com.zyds.view.activity.fragment.ImageFragment;
+import www.zyds.com.zyds.view.activity.fragment.SimpleFragment;
 
 import static com.ashokvarma.bottomnavigation.BottomNavigationBar.BACKGROUND_STYLE_RIPPLE;
 import static com.ashokvarma.bottomnavigation.BottomNavigationBar.MODE_FIXED;

@@ -1,4 +1,4 @@
-package www.zyds.com.zyds.fragment;
+package www.zyds.com.zyds.view.activity.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.ColorInt;

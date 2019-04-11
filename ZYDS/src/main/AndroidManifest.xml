@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/LLAppBaseTheme">
         <activity
-            android:name=".zyds.activity.MainActivity"
+            android:name=".zyds.view.activity.MainActivity"
             android:theme="@style/StartTheme" />
         <activity
-            android:name=".zyds.activity.SplashActivity"
+            android:name=".zyds.view.activity.SplashActivity"
             android:theme="@style/StartTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".zyds.base.BaseActivity"></activity>
+        <activity android:name=".zyds.base.BaseActivity" />
+        <activity android:name=".zyds.view.activity.MenuListActivity" />
+        <activity android:name=".zyds.view.activity.SwipMeunActivity" />
+        <activity android:name=".zyds.base.BaseMVPActivity" />
+        <activity android:name=".zyds.view.activity.BannerActivity"></activity>
     </application>
 
 </manifest>

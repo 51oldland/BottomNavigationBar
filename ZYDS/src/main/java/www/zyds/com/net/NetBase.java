@@ -10,8 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import www.zyds.com.base.MyApp;
-import www.zyds.com.utils.GetUserTokenUtils;
-import www.zyds.com.utils.VersionCodeAndNameUtils;
 
 /**
  * Created by wwp
@@ -25,9 +23,9 @@ public class NetBase {
 
     public static Map<String, String> appendCommParams(Context context) {
         Map<String, String> params = new HashMap<String, String>();
-        params.put(UrlString.VERSION_NAME, VersionCodeAndNameUtils.getAppVersionName(context));
-        params.put(UrlString.SYSTEM_TYPE_NAME, UrlString.SYSTEM_TYPE);
-        params.put(GetUserTokenUtils.TOKEN_NAME, GetUserTokenUtils.getToken(context));
+//        params.put(UrlString.VERSION_NAME, VersionCodeAndNameUtils.getAppVersionName(context));
+//        params.put(UrlString.SYSTEM_TYPE_NAME, UrlString.SYSTEM_TYPE);
+//        params.put(GetUserTokenUtils.TOKEN_NAME, GetUserTokenUtils.getToken(context));
         return params;
     }
     public static void getStringReq(Context context,String url,Map<String,String> params,final OnDataRequestListener listener){
